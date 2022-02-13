@@ -1361,7 +1361,7 @@ declare module 'discord.js' {
 		public topic: string | null;
 		public rateLimitPerUser: number;
 		public setRateLimitPerUser(rateLimitPerUser: number, reason?: string): Promise<TextChannel>;
-		public createWebhook(name: string, avatar: BufferResolvable, reason?: string): Promise<Webhook>;
+		public createWebhook(name: string, avatar?: BufferResolvable, reason?: string): Promise<Webhook>;
 		public fetchWebhooks(): Promise<Collection<Snowflake, Webhook>>;
 		public setNSFW(nsfw: boolean, reason?: string): Promise<this>;
 	}
