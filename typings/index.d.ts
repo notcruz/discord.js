@@ -9,7 +9,7 @@ declare module 'discord.js' {
 	import { EventEmitter } from 'events';
 	import { Stream, Readable as ReadableStream } from 'stream';
 	import { ChildProcess } from 'child_process';
-	import { APIMessage } from 'discord-api-types/v10';
+	import { APIEmbed, APIMessage } from 'discord-api-types/v10';
 	
 	export const version: string;
 
@@ -1149,6 +1149,7 @@ declare module 'discord.js' {
 		public setTitle(title: StringResolvable): this;
 		public setURL(url: string): this;
 		public static normalizeField(name: StringResolvable, value: StringResolvable, inline?: boolean): EmbedField;
+		public toJSON(): APIEmbed;
 	}
 
 	export class RichPresenceAssets {
