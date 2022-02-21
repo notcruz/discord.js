@@ -9,7 +9,8 @@ declare module 'discord.js' {
 	import { EventEmitter } from 'events';
 	import { Stream, Readable as ReadableStream } from 'stream';
 	import { ChildProcess } from 'child_process';
-
+	import { APIMessage } from 'discord-api-types/v10';
+	
 	export const version: string;
 
 //#region Classes
@@ -1669,7 +1670,7 @@ declare module 'discord.js' {
 		public edit(name?: string, avatar?: BufferResolvable): Promise<Webhook>;
 		public edit(options?: WebhookEditOptions, reason?: string): Promise<Webhook>;
 		public send(content?: StringResolvable, options?: WebhookMessageOptions & { split: false } | RichEmbed | Attachment): Promise<Message>;
-		public send(content?: StringResolvable, options?: WebhookMessageOptions | RichEmbed | Attachment): Promise<Message | Message[]>;
+		public send(content?: StringResolvable, options?: WebhookMessageOptions | RichEmbed | Attachment): Promise<APIMessage>;
 		public send(options?: WebhookMessageOptions | RichEmbed | Attachment): Promise<Message | Message[]>;
 		public sendCode(lang: string, content: StringResolvable, options?: WebhookMessageOptions): Promise<Message | Message[]>;
 		public sendFile(attachment: BufferResolvable, name?: string, content?: StringResolvable, options?: WebhookMessageOptions): Promise<Message>;
