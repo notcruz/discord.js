@@ -77,8 +77,8 @@ exports.DefaultOptions = {
    * @property {string} [invite='https://discord.gg'] Base url of invites
    */
   http: {
-    version: 7,
-    host: 'https://discordapp.com',
+    version: 10,
+    host: 'https://discord.com',
     cdn: 'https://cdn.discordapp.com',
   },
 };
